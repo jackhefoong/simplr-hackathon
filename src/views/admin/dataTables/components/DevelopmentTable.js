@@ -1,12 +1,28 @@
 /* eslint-disable */
-import {Flex, Progress, Table, Tbody, Td, Text, Th, Thead, Tr, useColorModeValue} from '@chakra-ui/react';
+import {
+  Flex,
+  Progress,
+  Spacer,
+  Table,
+  Tbody,
+  Td,
+  Text,
+  Th,
+  Thead,
+  Tr,
+  useColorModeValue,
+  Box,
+  HStack,
+} from '@chakra-ui/react';
 // Custom components
 import Card from 'components/card/Card';
-import {AndroidLogo, AppleLogo, WindowsLogo} from 'components/icons/Icons';
 import Menu from 'components/menu/MainMenu';
 import React, {useMemo} from 'react';
 import {useGlobalFilter, usePagination, useSortBy, useTable} from 'react-table';
 import {Button} from '@chakra-ui/react';
+import {Icon} from '@chakra-ui/react';
+import {MdCheckCircle, MdCancel} from 'react-icons/md';
+
 export default function DevelopmentTable(props) {
   const {columnsData, tableData} = props;
 
@@ -33,7 +49,7 @@ export default function DevelopmentTable(props) {
     <Card direction="column" w="100%" px="0px" overflowX={{sm: 'scroll', lg: 'hidden'}}>
       <Flex px="25px" justify="space-between" mb="20px" align="center">
         <Text color={textColor} fontSize="22px" fontWeight="700" lineHeight="100%">
-          Development Table
+          Leave Applications
         </Text>
         <Menu />
       </Flex>
@@ -82,17 +98,37 @@ export default function DevelopmentTable(props) {
                       </Text>
                     );
                   } else if (cell.column.Header === 'STATUS') {
-                    // data = (
-                    //   <Text color={textColor} fontSize="sm" fontWeight="700">
-                    //     {cell.value}
-                    //   </Text>
-                    // );
-                    data = (
-                      <>
-                        <Button colorScheme={'green'}>Approve</Button>
-                        <Button colorScheme={'red'}>Deny</Button> 
-                      </>
-                    );
+                    {
+                      cell.value === 'pending'
+                        ? (data = (
+                            <HStack spacing="10px">
+                              <Box>
+                                <Button colorScheme={'green'}>Approve</Button>
+                              </Box>
+                              <Box>
+                                <Button colorScheme={'red'}>Deny</Button>
+                              </Box>
+                            </HStack>
+                          ))
+                        : (data = (
+                            <Flex align="center">
+                              <Icon
+                                w="24px"
+                                h="24px"
+                                me="5px"
+                                color={
+                                  cell.value === 'Approved' ? 'green.500' : cell.value === 'Denied' ? 'red.500' : null
+                                }
+                                as={
+                                  cell.value === 'Approved' ? MdCheckCircle : cell.value === 'Denied' ? MdCancel : null
+                                }
+                              />
+                              <Text color={textColor} fontSize="sm" fontWeight="700">
+                                {cell.value}
+                              </Text>
+                            </Flex>
+                          ));
+                    }
                   }
                   return (
                     <Td
