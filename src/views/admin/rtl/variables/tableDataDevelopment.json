@@ -1,0 +1,26 @@
+[
+  {
+    "name": "James Charles",
+    "typeofclaim": "Medical Claim",
+    "file": "1 Attachment",
+    "status": "Denied"
+  },
+  {
+    "name": "James Bond",
+    "typeofclaim": "Dental Claim",
+    "file": "1 Attachment",
+    "status": "Denied"
+  },
+  {
+    "name": "Jack Lim",
+    "typeofclaim": "Medical Claim",
+    "file": "2 Attachments",
+    "status": "Approved"
+  },
+  {
+    "name": "Bernard Tan",
+    "typeofclaim": "Medical Claim",
+    "file": "1 Attachment",
+    "status": "Pending"
+  }
+]

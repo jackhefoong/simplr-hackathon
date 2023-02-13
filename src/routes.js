@@ -59,7 +59,7 @@ const routes = [
   },
   {
     name: "Employee Benefits",
-    layout: "/rtl",
+    layout: "/admin",
     path: "/rtl-default",
     icon: <Icon as={IoMdHeart} width='20px' height='20px' color='inherit' />,
     component: RTL,
