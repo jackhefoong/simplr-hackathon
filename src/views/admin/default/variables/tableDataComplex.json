@@ -28,35 +28,5 @@
     "name": "Vyashya Raj",
     "level": "1",
     "isOnboarding": "True"
-  },
-  {
-    "id": "SIML455N32",
-    "name": "Jac Khe",
-    "level": "3",
-    "isOnboarding": "False"
-  },
-  {
-    "id": "SIML239K92",
-    "name": "Tareef",
-    "level": "2",
-    "isOnboarding": "False"
-  },
-  {
-    "id": "SIML122J29",
-    "name": "Zhong How",
-    "level": "1",
-    "isOnboarding": "True"
-  },
-  {
-    "id": "SIML928O12",
-    "name": "Rex Yap",
-    "level": "1",
-    "isOnboarding": "True"
-  },
-  {
-    "id": "SIML933O12",
-    "name": "Vyashya Raj",
-    "level": "1",
-    "isOnboarding": "True"
   }
 ]
