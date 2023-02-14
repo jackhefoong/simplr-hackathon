@@ -1,26 +1,62 @@
 [
   {
-    "name":"Horizon UI PRO",
-    "status": "Approved",
-    "date": "18 Apr 2022",
-    "progress": 75.5  
+    "id": "SIML455N32",
+    "name": "Jac Khe",
+    "level": "3",
+    "isOnboarding": "False"
   },
   {
-    "name":"Horizon UI Free",
-    "status": "Disable",
-    "date": "18 Apr 2022",
-    "progress": 25.5  
+    "id": "SIML239K92",
+    "name": "Tareef",
+    "level": "2",
+    "isOnboarding": "False"
   },
   {
-    "name":"Marketplace",
-    "status": "Error",
-    "date": "20 May 2023 - 5.Dec.2025",
-    "progress": 90  
+    "id": "SIML122J29",
+    "name": "Zhong How",
+    "level": "1",
+    "isOnboarding": "True"
   },
   {
-    "name":"Weekly Updates",
-    "status": "Approved",
-    "date": "12 Jul 2023 - 5.Dec.2025",
-    "progress": 50.5  
+    "id": "SIML928O12",
+    "name": "Rex Yap",
+    "level": "1",
+    "isOnboarding": "True"
+  },
+  {
+    "id": "SIML933O12",
+    "name": "Vyashya Raj",
+    "level": "1",
+    "isOnboarding": "True"
+  },
+  {
+    "id": "SIML455N32",
+    "name": "Jac Khe",
+    "level": "3",
+    "isOnboarding": "False"
+  },
+  {
+    "id": "SIML239K92",
+    "name": "Tareef",
+    "level": "2",
+    "isOnboarding": "False"
+  },
+  {
+    "id": "SIML122J29",
+    "name": "Zhong How",
+    "level": "1",
+    "isOnboarding": "True"
+  },
+  {
+    "id": "SIML928O12",
+    "name": "Rex Yap",
+    "level": "1",
+    "isOnboarding": "True"
+  },
+  {
+    "id": "SIML933O12",
+    "name": "Vyashya Raj",
+    "level": "1",
+    "isOnboarding": "True"
   }
 ]

@@ -26,7 +26,7 @@ import {
 
 export default function Marketplace() {
   return (
-    <Box m="100px">
+    <Box>
       <HStack spacing="10px">
         <Select placeholder="Reviewee" bg="white" w="200px">
           <option value="option1">Tareef</option>
@@ -34,7 +34,7 @@ export default function Marketplace() {
           <option value="option3">Rex Yap</option>
         </Select>
         {/* Reviewer */}
-        <Select placeholder="Jac Khe" bg="white" w="200px"disabled>
+        <Select placeholder="Jac Khe  " bg="white" w="200px" disabled>
           <option value="option1">Option 1</option>
           <option value="option2">Option 2</option>
           <option value="option3">Option 3</option>
@@ -538,7 +538,9 @@ export default function Marketplace() {
 
       <Flex justifyContent="end">
         <Box my="10px">
-          <Button bg="#422afb" color="white">Submit</Button>
+          <Button bg="#422afb" color="white">
+            Submit
+          </Button>
         </Box>
       </Flex>
     </Box>

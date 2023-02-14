@@ -18,19 +18,19 @@ export const columnsDataCheck = [
 ];
 export const columnsDataComplex = [
   {
+    Header: "EMPLOYEE ID",
+    accessor: "id",
+  },
+  {
     Header: "NAME",
     accessor: "name",
   },
   {
-    Header: "STATUS",
-    accessor: "status",
+    Header: "EXECUTIVE LEVEL",
+    accessor: "level",
   },
   {
-    Header: "DATE",
-    accessor: "date",
-  },
-  {
-    Header: "PROGRESS",
-    accessor: "progress",
-  },
+    Header: "isOnboarding",
+    accessor: "isOnboarding",
+  }
 ];

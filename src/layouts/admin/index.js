@@ -132,7 +132,7 @@ export default function Dashboard(props) {
           transitionDuration='.2s, .2s, .35s'
           transitionProperty='top, bottom, width'
           transitionTimingFunction='linear, linear, ease'>
-            <Portal>
+            {/* <Portal>
               <Box>
                 <Navbar
                   onOpen={onOpen}
@@ -144,7 +144,7 @@ export default function Dashboard(props) {
                   {...rest}
                 />
               </Box>
-            </Portal>
+            </Portal> */}
 
           {getRoute() ? (
             <Box
@@ -159,9 +159,9 @@ export default function Dashboard(props) {
               </Switch>
             </Box>
           ) : null}
-          <Box>
+          {/* <Box>
             <Footer />
-          </Box>
+          </Box> */}
         </Box>
       </SidebarContext.Provider>
     </Box>
