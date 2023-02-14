@@ -3,10 +3,10 @@ export const columnsDataCheck = [
     Header: "NAME",
     accessor: "name",
   },
-  {
-    Header: "WORK PROGRESS",
-    accessor: "work progress",
-  },
+  // {
+  //   Header: "WORK PROGRESS",
+  //   accessor: "work progress",
+  // },
   {
     Header: "AMOUNT OF LEAVE",
     accessor: "amount of leave",
@@ -30,7 +30,7 @@ export const columnsDataComplex = [
     accessor: "level",
   },
   {
-    Header: "isOnboarding",
+    Header: "IS ONBOARDING",
     accessor: "isOnboarding",
   }
 ];

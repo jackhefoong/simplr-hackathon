@@ -27,13 +27,19 @@ function SignIn() {
     if (email == 'admin@mail.com') {
       user.isAdmin = 'True';
       history.push('/');
-      history.go(0)
+      history.go(0);
       window.localStorage.setItem('user', JSON.stringify(user));
     } else if (email == 'user@mail.com') {
       user.isAdmin = 'False';
       user.isOnboarding = 'True';
       history.push('/');
-      history.go(0)
+      history.go(0);
+      window.localStorage.setItem('user', JSON.stringify(user));
+    } else if (email == 'user2@mail.com') {
+      user.isAdmin = 'False';
+      user.isOnboarding = 'False';
+      history.push('/');
+      history.go(0);
       window.localStorage.setItem('user', JSON.stringify(user));
     }
   }

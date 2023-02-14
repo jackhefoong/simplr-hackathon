@@ -254,7 +254,7 @@ export const pieChartData = [63, 25, 12];
 export const lineChartDataTotalSpent = [
   {
     name: "Employee Performance",
-    data: [70, 74, 78, 82, 79, 86],
+    data: [72, 74, 78, 82, 79, 86],
   }
 ];
 
@@ -300,7 +300,7 @@ export const lineChartOptionsTotalSpent = {
   },
   xaxis: {
     type: "numeric",
-    categories: ["SEP", "OCT", "NOV", "DEC", "JAN", "FEB"],
+    categories: ["2017", "2018", "2019", "2020", "2021", "2022"],
     labels: {
       style: {
         colors: "#A3AED0",

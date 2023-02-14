@@ -116,7 +116,7 @@ export default function ColumnsTable(props) {
                         {cell.value}
                       </Text>
                     );
-                  } else if (cell.column.Header === "isOnboarding") {
+                  } else if (cell.column.Header === "IS ONBOARDING") {
                     data = (
                       <Text color={textColor} fontSize='sm' fontWeight='700'>
                         {cell.value}

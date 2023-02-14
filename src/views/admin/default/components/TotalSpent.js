@@ -48,7 +48,7 @@ export default function TotalSpent(props) {
       {...rest}>
       <Flex justify='space-between' ps='0px' pe='20px' pt='5px'>
         <Flex align='center' w='100%'>
-          <Button
+          {/* <Button
             bg={boxBg}
             fontSize='sm'
             fontWeight='500'
@@ -60,7 +60,7 @@ export default function TotalSpent(props) {
               me='4px'
             />
             This month
-          </Button>
+          </Button> */}
           <Button
             ms='auto'
             align='center'
@@ -86,7 +86,7 @@ export default function TotalSpent(props) {
             textAlign='start'
             fontWeight='700'
             lineHeight='100%'>
-            Monthly Average Performance
+            Yearly Average Performance
           </Text>
           <Flex align='center' mb='20px'>
             <Text

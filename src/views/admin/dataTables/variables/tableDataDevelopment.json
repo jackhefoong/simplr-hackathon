@@ -27,36 +27,36 @@
     "name": "Wendy Ng",
     "typeofleave": "Annual Leave",
     "duration": "24 Oct 2022 - 5 Dec 2025",
-    "status": "pending"
+    "status": "Pending"
   },
   {
     "name": "Xavier Lim",
     "typeofleave": "Annual Leave",
     "duration": "24 Oct 2022",
-    "status": "pending"
+    "status": "Pending"
   },
   {
     "name": "James Bond",
     "typeofleave": "Annual Leave",
     "duration": "17 Jan 2023 - 5 Dec 2025",
-    "status": "pending"
+    "status": "Pending"
   },
   {
     "name": "Charles Lim",
     "typeofleave": "Sick Leave",
     "duration": "21 Feb 2023 - 5 Dec 2025",
-    "status": "pending"
+    "status": "Pending"
   },
   {
     "name": "James Tan",
     "typeofleave": "Personal Leave",
     "duration": "13 Mar 2023 - 5 Dec 2025",
-    "status": "pending"
+    "status": "Pending"
   },
   {
     "name": "John Doe",
     "typeofleave": "Annual Leave",
     "duration": "24 Jan 2023 - 5 Dec 2025",
-    "status": "pending"
+    "status": "Pending"
   }
 ]
