@@ -1,31 +1,25 @@
 [{
-  "name":["Horizon UI PRO",false],
-  "quantity": 2458, 
+  "name":["Jac Khe",false],
+  "amount of leave": "5 Days", 
   "date": "12 Jan 2023 - 5.Dec.2025",
-  "progress": 17.5  
+  "work progress": 17.5  
 },
 {
-  "name":["Horizon UI Free",true],
-  "quantity": 1485, 
+  "name":["Tareef",true],
+  "amount of leave": "10 Days", 
   "date": "21 Feb 2023 - 5.Dec.2025",
-  "progress": 10.8  
+  "work progress": 10.8  
 },
 {
-  "name":["Weekly Update",true],
-  "quantity": 1024, 
+  "name":["Rex Yap",true],
+  "amount of leave": "15 Days", 
   "date": "13 Mar 2023 - 5.Dec.2025",
-  "progress": 21.3  
+  "work progress": 21.3  
 },
 {
-  "name":["Venus 3D Asset",true],
-  "quantity": 858, 
+  "name":["Zhong How",true],
+  "amount of leave": "20 Days", 
   "date": "24 Jan 2023 - 5.Dec.2025",
-  "progress": 31.5  
-},
-{
-  "name":["Marketplace",false],
-  "quantity": 258, 
-  "date": "24 Oct 2022",
-  "progress": 12.2  
+  "work progress": 31.5  
 }
 ]
