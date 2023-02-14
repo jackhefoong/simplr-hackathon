@@ -43,6 +43,13 @@ const routes = [
     component: DataTables,
   },
   {
+    name: "Employee Benefits",
+    layout: "/admin",
+    path: "/rtl-default",
+    icon: <Icon as={IoMdHeart} width='20px' height='20px' color='inherit' />,
+    component: RTL,
+  },
+  {
     name: "Performance Review",
     layout: "/admin",
     path: "/nft-marketplace",
@@ -56,13 +63,6 @@ const routes = [
     ),
     component: NFTMarketplace,
     secondary: true,
-  },
-  {
-    name: "Employee Benefits",
-    layout: "/admin",
-    path: "/rtl-default",
-    icon: <Icon as={IoMdHeart} width='20px' height='20px' color='inherit' />,
-    component: RTL,
   },
   {
     name: "Log Out",

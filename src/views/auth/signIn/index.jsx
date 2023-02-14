@@ -33,7 +33,7 @@ function SignIn() {
       user.isAdmin = 'False';
       user.isOnboarding = 'True';
       history.push('/');
-      history.go(0);
+      // history.go(0);
       window.localStorage.setItem('user', JSON.stringify(user));
     } else if (email == 'user2@mail.com') {
       user.isAdmin = 'False';

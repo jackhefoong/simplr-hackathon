@@ -25,9 +25,9 @@ export default function GeneralInformation(props) {
         mb='4px'>
         General Information
       </Text>
-      <Text color={textColorSecondary} fontSize='md' me='26px' mb='40px'>
+      {/* <Text color={textColorSecondary} fontSize='md' me='26px' mb='40px'>
       "I'm a professional Netflix marathoner, expert pizza eater, and occasional adult. I'm not saying I'm Batman, but have you ever seen me and Batman in the same room? Me neither. Let's be friends so I can borrow your dog and pretend it's mine on Instagram."
-      </Text>
+      </Text> */}
       <SimpleGrid columns='2' gap='20px'>
         <Information
           boxShadow={cardShadow}
@@ -37,7 +37,7 @@ export default function GeneralInformation(props) {
         <Information
           boxShadow={cardShadow}
           title='Languages'
-          value='English, Spanish, Italian'
+          value='English, Chinese, Malay'
         />
         <Information
           boxShadow={cardShadow}

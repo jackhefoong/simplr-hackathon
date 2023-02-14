@@ -51,7 +51,6 @@ export default function DevelopmentTable(props) {
   const isAdmin = user.isAdmin;
   return (
     <Box>
-
       {/* Application Form TODO */}
       <Box>
         <FormControl>
@@ -146,7 +145,7 @@ export default function DevelopmentTable(props) {
                                         ? MdCancel
                                         : cell.value === 'Pending'
                                         ? MdWarning
-                                        : null  
+                                        : null
                                     }
                                   />
                                   <Text color={textColor} fontSize="sm" fontWeight="700">
@@ -161,13 +160,21 @@ export default function DevelopmentTable(props) {
                                   h="24px"
                                   me="5px"
                                   color={
-                                    cell.value === 'Approved' ? 'green.500' : cell.value === 'Denied' ? 'red.500' : null
+                                    cell.value === 'Approved'
+                                      ? 'green.500'
+                                      : cell.value === 'Denied'
+                                      ? 'red.500'
+                                      : cell.value === 'Pending'
+                                      ? 'yellow.500'
+                                      : null
                                   }
                                   as={
                                     cell.value === 'Approved'
                                       ? MdCheckCircle
                                       : cell.value === 'Denied'
                                       ? MdCancel
+                                      : cell.value === 'Pending'
+                                      ? MdWarning
                                       : null
                                   }
                                 />
