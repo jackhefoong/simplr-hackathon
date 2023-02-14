@@ -1,28 +1,19 @@
-/*!
-  _   _  ___  ____  ___ ________  _   _   _   _ ___   
- | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _| 
- | |_| | | | | |_) || |  / / | | |  \| | | | | || | 
- |  _  | |_| |  _ < | | / /| |_| | |\  | | |_| || |
- |_| |_|\___/|_| \_\___/____\___/|_| \_|  \___/|___|
-                                                                                                                                                                                                                                                                                                                                       
-=========================================================
-* Horizon UI - v1.1.0
-=========================================================
 
-* Product Page: https://www.horizon-ui.com/
-* Copyright 2022 Horizon UI (https://www.horizon-ui.com/)
-
-* Designed and Coded by Simmmple
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 import React from "react";
 
 // Chakra imports
+
+import {
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Input
+} from '@chakra-ui/react'
+
+import { Heading } from '@chakra-ui/react'
+
 import {
   Box,
   Button,
@@ -33,6 +24,20 @@ import {
   useColorModeValue,
   SimpleGrid,
 } from "@chakra-ui/react";
+
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+  TableContainer,
+} from '@chakra-ui/react'
+
+import { Checkbox, CheckboxGroup } from '@chakra-ui/react'
 
 // Custom components
 import Banner from "views/admin/marketplace/components/Banner";
@@ -60,246 +65,194 @@ export default function Marketplace() {
   const textColor = useColorModeValue("secondaryGray.900", "white");
   const textColorBrand = useColorModeValue("brand.500", "white");
   return (
-    <Box pt={{ base: "180px", md: "80px", xl: "80px" }}>
-      {/* Main Fields */}
-      <Grid
-        mb='20px'
-        gridTemplateColumns={{ xl: "repeat(3, 1fr)", "2xl": "1fr 0.46fr" }}
-        gap={{ base: "20px", xl: "20px" }}
-        display={{ base: "block", xl: "grid" }}>
-        <Flex
-          flexDirection='column'
-          gridArea={{ xl: "1 / 1 / 2 / 3", "2xl": "1 / 1 / 2 / 2" }}>
-          <Banner />
-          <Flex direction='column'>
-            <Flex
-              mt='45px'
-              mb='20px'
-              justifyContent='space-between'
-              direction={{ base: "column", md: "row" }}
-              align={{ base: "start", md: "center" }}>
-              <Text color={textColor} fontSize='2xl' ms='24px' fontWeight='700'>
-                Trending NFTs
-              </Text>
-              <Flex
-                align='center'
-                me='20px'
-                ms={{ base: "24px", md: "0px" }}
-                mt={{ base: "20px", md: "0px" }}>
-                <Link
-                  color={textColorBrand}
-                  fontWeight='500'
-                  me={{ base: "34px", md: "44px" }}
-                  to='#art'>
-                  Art
-                </Link>
-                <Link
-                  color={textColorBrand}
-                  fontWeight='500'
-                  me={{ base: "34px", md: "44px" }}
-                  to='#music'>
-                  Music
-                </Link>
-                <Link
-                  color={textColorBrand}
-                  fontWeight='500'
-                  me={{ base: "34px", md: "44px" }}
-                  to='#collectibles'>
-                  Collectibles
-                </Link>
-                <Link color={textColorBrand} fontWeight='500' to='#sports'>
-                  Sports
-                </Link>
-              </Flex>
-            </Flex>
-            <SimpleGrid columns={{ base: 1, md: 3 }} gap='20px'>
-              <NFT
-                name='Abstract Colors'
-                author='By Esthera Jackson'
-                bidders={[
-                  Avatar1,
-                  Avatar2,
-                  Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                ]}
-                image={Nft1}
-                currentbid='0.91 ETH'
-                download='#'
-              />
-              <NFT
-                name='ETH AI Brain'
-                author='By Nick Wilson'
-                bidders={[
-                  Avatar1,
-                  Avatar2,
-                  Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                ]}
-                image={Nft2}
-                currentbid='0.91 ETH'
-                download='#'
-              />
-              <NFT
-                name='Mesh Gradients '
-                author='By Will Smith'
-                bidders={[
-                  Avatar1,
-                  Avatar2,
-                  Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                ]}
-                image={Nft3}
-                currentbid='0.91 ETH'
-                download='#'
-              />
-            </SimpleGrid>
-            <Text
-              mt='45px'
-              mb='36px'
-              color={textColor}
-              fontSize='2xl'
-              ms='24px'
-              fontWeight='700'>
-              Recently Added
-            </Text>
-            <SimpleGrid
-              columns={{ base: 1, md: 3 }}
-              gap='20px'
-              mb={{ base: "20px", xl: "0px" }}>
-              <NFT
-                name='Swipe Circles'
-                author='By Peter Will'
-                bidders={[
-                  Avatar1,
-                  Avatar2,
-                  Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                ]}
-                image={Nft4}
-                currentbid='0.91 ETH'
-                download='#'
-              />
-              <NFT
-                name='Colorful Heaven'
-                author='By Mark Benjamin'
-                bidders={[
-                  Avatar1,
-                  Avatar2,
-                  Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                ]}
-                image={Nft5}
-                currentbid='0.91 ETH'
-                download='#'
-              />
-              <NFT
-                name='3D Cubes Art'
-                author='By Manny Gates'
-                bidders={[
-                  Avatar1,
-                  Avatar2,
-                  Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                ]}
-                image={Nft6}
-                currentbid='0.91 ETH'
-                download='#'
-              />
-            </SimpleGrid>
-          </Flex>
-        </Flex>
-        <Flex
-          flexDirection='column'
-          gridArea={{ xl: "1 / 3 / 2 / 4", "2xl": "1 / 2 / 2 / 3" }}>
-          <Card px='0px' mb='20px'>
-            <TableTopCreators
-              tableData={tableDataTopCreators}
-              columnsData={tableColumnsTopCreators}
-            />
-          </Card>
-          <Card p='0px'>
-            <Flex
-              align={{ sm: "flex-start", lg: "center" }}
-              justify='space-between'
-              w='100%'
-              px='22px'
-              py='18px'>
-              <Text color={textColor} fontSize='xl' fontWeight='600'>
-                History
-              </Text>
-              <Button variant='action'>See all</Button>
-            </Flex>
+    <Box m="100px">
+      <Heading>Ratings Definition</Heading>
 
-            <HistoryItem
-              name='Colorful Heaven'
-              author='By Mark Benjamin'
-              date='30s ago'
-              image={Nft5}
-              price='0.91 ETH'
-            />
-            <HistoryItem
-              name='Abstract Colors'
-              author='By Esthera Jackson'
-              date='58s ago'
-              image={Nft1}
-              price='0.91 ETH'
-            />
-            <HistoryItem
-              name='ETH AI Brain'
-              author='By Nick Wilson'
-              date='1m ago'
-              image={Nft2}
-              price='0.91 ETH'
-            />
-            <HistoryItem
-              name='Swipe Circles'
-              author='By Peter Will'
-              date='1m ago'
-              image={Nft4}
-              price='0.91 ETH'
-            />
-            <HistoryItem
-              name='Mesh Gradients '
-              author='By Will Smith'
-              date='2m ago'
-              image={Nft3}
-              price='0.91 ETH'
-            />
-            <HistoryItem
-              name='3D Cubes Art'
-              author='By Manny Gates'
-              date='3m ago'
-              image={Nft6}
-              price='0.91 ETH'
-            />
-          </Card>
-        </Flex>
-      </Grid>
-      {/* Delete Product */}
+      <div  >
+<p>      Exceptional (9-10): Consistently exceeds all relevant performance standards. Provides 
+leadership, fosters teamwork, is highly productive, innovative, responsive and generates 
+top quality work. </p>
+<br />
+<p>Exceeds expectations (7-8): Consistently meets and often exceeds all relevant 
+performance standards. Shows initiative, works collaboratively, has strong technical and 
+interpersonal skills or has achieved significant improvement in these areas. </p>
+<br />
+<p>Meets expectations (5-6): Meets all relevant performance standards. Seldom exceeds 
+or falls short of desired results or objectives.</p>
+<br />
+<p>
+Below expectations (3-4): Sometimes meets the performance standards but seldom 
+exceeds them. Often falls short of desired results. Performance has declined significantly, 
+or employee has not sustained adequate improvement, as required since the last 
+performance review or performance.
+</p>
+<br />
+
+<p>Below expectations (3-4): Sometimes meets the performance standards but seldom 
+exceeds them. Often falls short of desired results. Performance has declined significantly, 
+or employee has not sustained adequate improvement, as required since the last 
+performance review or performance.</p>
+</div>
+
+<Heading mt="20px">Quality of Work</Heading>
+
+<Box border="1px solid" borderColor="black">
+      <Table>
+        <Thead>
+          <Tr>
+            <Th borderRight="1px solid" borderColor="black" padding="10px">
+              
+            </Th>
+            <Th borderRight="1px solid" borderColor="black" padding="10px">
+              Rating
+            </Th>
+            <Th padding="10px">Not Applicable</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <Tr>
+            <Td borderRight="1px solid" borderColor="black" padding="10px">
+            Has established a track record of producing work that is highly 
+accurate, while demonstrating attention to detail. Is personally 
+committed to high quality work and encourages others to have 
+similar standards
+            </Td>
+            <Td borderRight="1px solid" borderColor="black" padding="10px">
+
+            </Td>
+            <Td padding="10px"> <Checkbox defaultChecked></Checkbox></Td>
+          </Tr>
+          <Tr>
+            <Td borderRight="1px solid" borderColor="black" padding="10px">
+              COMMENTS
+            </Td>
+
+          </Tr>
+        </Tbody>
+      </Table>
+    </Box>
+
+    <Heading mt="20px">Initiative</Heading>
+
+<Box border="1px solid" borderColor="black">
+      <Table>
+        <Thead>
+          <Tr>
+            <Th borderRight="1px solid" borderColor="black" padding="10px">
+              
+            </Th>
+            <Th borderRight="1px solid" borderColor="black" padding="10px">
+              Rating
+            </Th>
+            <Th padding="10px">Not Applicable</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <Tr>
+            <Td borderRight="1px solid" borderColor="black" padding="10px">
+            Recognizes opportunities and initiates actions to capitalize on 
+them. Looks for new and productive ways to make an impact. 
+Demonstrates this characteristic when it comes to generating new 
+ideas or processes, capitalizing on new business opportunities, 
+seeking out and taking on increasing responsibility or resolving 
+problems as they occur.
+            </Td>
+            <Td borderRight="1px solid" borderColor="black" padding="10px">
+              
+            </Td>
+            <Td padding="10px"> <Checkbox defaultChecked></Checkbox></Td>
+          </Tr>
+          <Tr>
+            <Td borderRight="1px solid" borderColor="black" padding="10px">
+              COMMENTS
+            </Td>
+
+          </Tr>
+        </Tbody>
+      </Table>
+    </Box>
+
+    <Heading mt="20px">Productivity</Heading>
+
+<Box border="1px solid" borderColor="black">
+      <Table>
+        <Thead>
+          <Tr>
+            <Th borderRight="1px solid" borderColor="black" padding="10px">
+              
+            </Th>
+            <Th borderRight="1px solid" borderColor="black" padding="10px">
+              Rating
+            </Th>
+            <Th padding="10px">Not Applicable</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <Tr>
+            <Td borderRight="1px solid" borderColor="black" padding="10px">
+            Meets or exceeds productivity standards that have been 
+established for his/her organizational level or position. Is 
+continuously combining skills, ability and effort to ensure that 
+expectations related to results/output are achieved
+            </Td>
+            <Td borderRight="1px solid" borderColor="black" padding="10px">
+              
+            </Td>
+            <Td padding="10px"> <Checkbox defaultChecked></Checkbox></Td>
+          </Tr>
+          <Tr>
+            <Td borderRight="1px solid" borderColor="black" padding="10px">
+              COMMENTS
+            </Td>
+
+          </Tr>
+        </Tbody>
+      </Table>
+    </Box>
+
+    <Heading mt="20px">Customer Focus</Heading>
+
+<Box border="1px solid" borderColor="black">
+      <Table>
+        <Thead>
+          <Tr>
+            <Th borderRight="1px solid" borderColor="black" padding="10px">
+              
+            </Th>
+            <Th borderRight="1px solid" borderColor="black" padding="10px">
+              Rating
+            </Th>
+            <Th padding="10px">Not Applicable</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <Tr>
+            <Td borderRight="1px solid" borderColor="black" padding="10px">
+            Personally demonstrates that external (or internal) customers are a
+high priority. Identifies customer needs and expectations and 
+responds to them in a timely and effective manner. Anticipates and
+prevents delays or other factors that could adversely affect the 
+customer. Keeps customers informed about the status of pending 
+actions and inquires about customer satisfaction with products or 
+services. 
+            </Td>
+            <Td borderRight="1px solid" borderColor="black" padding="10px">
+              
+            </Td>
+            <Td padding="10px"> <Checkbox defaultChecked></Checkbox></Td>
+          </Tr>
+          <Tr>
+            <Td borderRight="1px solid" borderColor="black" padding="10px">
+              COMMENTS
+            </Td>
+
+          </Tr>
+        </Tbody>
+      </Table>
+    </Box>
+    
+
+
     </Box>
   );
 }
