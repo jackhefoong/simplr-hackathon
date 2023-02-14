@@ -21,7 +21,11 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
+  AccordionPanel,
   Image,
+  AccordionItem,
+  AccordionButton,
+  Accordion,
 } from '@chakra-ui/react';
 // Custom components
 import Card from 'components/card/Card';
@@ -54,6 +58,9 @@ export default function DevelopmentTable(props) {
   const textColor = useColorModeValue('secondaryGray.900', 'white');
   const iconColor = useColorModeValue('secondaryGray.500', 'white');
   const borderColor = useColorModeValue('gray.200', 'whiteAlpha.100');
+
+  const user = JSON.parse(window.localStorage.getItem('user'));
+  const isAdmin = user.isAdmin;
   return (
     <Card direction="column" w="100%" px="0px" overflowX={{sm: 'scroll', lg: 'hidden'}}>
       <Flex px="25px" justify="space-between" mb="20px" align="center">
@@ -74,13 +81,16 @@ export default function DevelopmentTable(props) {
               alt="Form"
             />
           </ModalBody>
-
-          <ModalFooter>
-            <Button colorScheme="red" mr={3} onClick={onClose}>
-              Deny
-            </Button>
-            <Button colorScheme="green" onClick={onClose}>Approve</Button>
-          </ModalFooter>
+          {isAdmin === 'True' ? (
+            <ModalFooter>
+              <Button colorScheme="red" mr={3} onClick={onClose}>
+                Deny
+              </Button>
+              <Button colorScheme="green" onClick={onClose}>
+                Approve
+              </Button>
+            </ModalFooter>
+          ) : <ModalFooter />}
         </ModalContent>
       </Modal>
 
@@ -124,9 +134,23 @@ export default function DevelopmentTable(props) {
                     );
                   } else if (cell.column.Header === 'FILE') {
                     data = (
+                      // <Accordion allowMultiple>
+                      //   <AccordionItem>
+                      //     <AccordionButton>
                       <Button color={textColor} fontSize="sm" fontWeight="700" bgColor={'lightgrey'} onClick={onOpen}>
                         {cell.value}
                       </Button>
+                      //       <AccordionPanel>
+                      //         {' '}
+                      //         <Image
+                      //           src="https://s2.studylib.net/store/data/013790713_1-1272db9c818ae7f8235af6262dde8287.png"
+                      //           alt="Form"
+                      //           boxSize={'md'}
+                      //         />
+                      //       </AccordionPanel>
+                      //     </AccordionButton>
+                      //   </AccordionItem>
+                      // </Accordion>
                     );
                   } else if (cell.column.Header === 'STATUS') {
                     data = (
@@ -144,7 +168,15 @@ export default function DevelopmentTable(props) {
                               ? 'yellow.500'
                               : null
                           }
-                          as={cell.value === 'Approved' ? MdCheckCircle : cell.value === 'Denied' ? MdCancel :  cell.value === 'Pending' ? MdWarning : null}
+                          as={
+                            cell.value === 'Approved'
+                              ? MdCheckCircle
+                              : cell.value === 'Denied'
+                              ? MdCancel
+                              : cell.value === 'Pending'
+                              ? MdWarning
+                              : null
+                          }
                         />
                         <Text color={textColor} fontSize="sm" fontWeight="700">
                           {cell.value}

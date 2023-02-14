@@ -18,7 +18,7 @@ import DataTables from "views/admin/dataTables";
 import RTL from "views/admin/rtl";
 
 // Auth Imports
-import SignInCentered from "views/auth/signIn";
+import SignInCentered from "views/auth/signIn"; 
 
 const routes = [
   {
@@ -28,13 +28,13 @@ const routes = [
     icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
     component: MainDashboard,
   },
-  {
-    name: "Profile",
-    layout: "/admin",
-    path: "/profile",
-    icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
-    component: Profile,
-  },
+  // {
+  //   name: "Profile",
+  //   layout: "/admin",
+  //   path: "/profile",
+  //   icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
+  //   component: Profile,
+  // },
   {
     name: "Leave Application",
     layout: "/admin",

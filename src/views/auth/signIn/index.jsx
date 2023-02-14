@@ -19,9 +19,23 @@ import {MdOutlineRemoveRedEye} from 'react-icons/md';
 import {RiEyeCloseLine} from 'react-icons/ri';
 
 function SignIn() {
-  const history = useHistory()
+  const history = useHistory();
   function handleSubmit() {
-    history.push("/")
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const user = {email, password};
+    if (email == 'admin@mail.com') {
+      user.isAdmin = 'True';
+      history.push('/');
+      history.go(0)
+      window.localStorage.setItem('user', JSON.stringify(user));
+    } else if (email == 'user@mail.com') {
+      user.isAdmin = 'False';
+      user.isOnboarding = 'True';
+      history.push('/');
+      history.go(0)
+      window.localStorage.setItem('user', JSON.stringify(user));
+    }
   }
   // Chakra color mode
   const textColor = useColorModeValue('navy.700', 'white');
@@ -40,7 +54,7 @@ function SignIn() {
       px={{base: '25px', md: '0px'}}
       mt={{base: '40px', md: '14vh'}}
       flexDirection="column"
-      >
+    >
       <Flex
         zIndex="2"
         direction="column"
@@ -50,7 +64,7 @@ function SignIn() {
         borderRadius="15px"
         mx={{base: 'auto', lg: 'unset'}}
         me="auto"
-        >
+      >
         <Box me="auto">
           <Heading color={textColor} fontSize="36px" mb="10px">
             Sign In
@@ -73,6 +87,7 @@ function SignIn() {
             mb="24px"
             fontWeight="500"
             size="lg"
+            id="email"
           />
           <FormLabel ms="4px" fontSize="sm" fontWeight="500" color={textColor} display="flex">
             Password<Text color={brandStars}>*</Text>
@@ -86,6 +101,7 @@ function SignIn() {
               size="lg"
               type={show ? 'text' : 'password'}
               variant="auth"
+              id="password"
             />
             <InputRightElement display="flex" alignItems="center" mt="4px">
               <Icon
