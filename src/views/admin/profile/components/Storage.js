@@ -28,7 +28,7 @@ export default function Banner(props) {
         <Menu ms='auto' />
       </Flex>
       <IconBox
-        mx='auto'
+        s mx='auto'
         h='100px'
         w='100px'
         icon={
