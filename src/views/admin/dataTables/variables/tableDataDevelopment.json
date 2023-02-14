@@ -1,68 +1,62 @@
 [
   {
-    "name":"James Charles",
-    "typeofleave": "annual leave", 
-    "duration": "13.Jan.2023 - 5.Dec.2025  ",
-    "status": 75.5  
+    "name": "James Charles",
+    "typeofleave": "Annual Leave",
+    "duration": "13 Jan 2023 - 5 Dec 2025  ",
+    "status": "Denied"
   },
   {
-    "name":"James Charles",
-    "typeofleave": "sick leave", 
-    "duration": "21.Feb.2023 - 5.Dec.2025",
-    "status": 35.4  
+    "name": "Eugene Khoo",
+    "typeofleave": "Sick Leave",
+    "duration": "21 Feb 2023",
+    "status": "Approved"
   },
   {
-    "name":"James Charles",
-    "typeofleave": "personal leave", 
-    "duration": "13.Mar.2023 - 5.Dec.2025",
-    "status": 25  
+    "name": "Vyashya Raj",
+    "typeofleave": "Personal Leave",
+    "duration": "13 Mar 2023",
+    "status": "Approved"
   },
   {
-    "name":"James Charles",
-    "typeofleave": "annual leave", 
-    "duration": "24.Jan.2023 - 5.Dec.2025",
-    "status": 100  
+    "name": "Trisha Lim",
+    "typeofleave": "Annual Leave",
+    "duration": "24 Jan 2023 - 5 Dec 2025",
+    "status": "Denied"
   },
   {
-    "name":"James Charles",
-    "typeofleave": ["apple", "windows"], 
-    "duration": "Oct 24, 2022  - 5.Dec.2025",
-    "status": 75.5  
+    "name": "Wendy Ng",
+    "typeofleave": "Annual Leave",
+    "duration": "24 Oct 2022 - 5 Dec 2025",
+    "status": "pending"
   },
   {
-    "name":"James Charles",
-    "typeofleave": "annual leave", 
-    "duration": "Oct 24, 2022",
-    "status": 75.5  
+    "name": "Xavier Lim",
+    "typeofleave": "Annual Leave",
+    "duration": "24 Oct 2022",
+    "status": "pending"
   },
   {
-    "name":"James Charles",
-    "typeofleave": "annual leave", 
-    "duration": "17.Jan.2023 - 5.Dec.2025",
-    "status": 75.5  
+    "name": "James Bond",
+    "typeofleave": "Annual Leave",
+    "duration": "17 Jan 2023 - 5 Dec 2025",
+    "status": "pending"
   },
   {
-    "name":"James Charles",
-    "typeofleave": "sick leave", 
-    "duration": "21.Feb.2023 - 5.Dec.2025",
-    "status": 35.4  
+    "name": "Charles Lim",
+    "typeofleave": "Sick Leave",
+    "duration": "21 Feb 2023 - 5 Dec 2025",
+    "status": "pending"
   },
   {
-    "name":"James Charles",
-    "typeofleave": "personal leave", 
-    "duration": "13.Mar.2023 - 5.Dec.2025",
-    "status": 25  
+    "name": "James Tan",
+    "typeofleave": "Personal Leave",
+    "duration": "13 Mar 2023 - 5 Dec 2025",
+    "status": "pending"
   },
   {
-    "name":"James Charles",
-    "typeofleave": "annual leave", 
-    "duration": "24.Jan.2023 - 5.Dec.2025",
-    "status": 100  
-  },
-  {
-    "name":"James Charles",
-    "typeofleave": ["apple", "windows"], 
-    "duration": "Oct 24, 2022  - 5.Dec.2025",
-    "status": 75.5  
+    "name": "John Doe",
+    "typeofleave": "Annual Leave",
+    "duration": "24 Jan 2023 - 5 Dec 2025",
+    "status": "pending"
   }
 ]

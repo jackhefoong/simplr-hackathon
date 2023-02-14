@@ -1,36 +1,18 @@
-export const columnsDataCheck = [
+export const columnsDataDevelopment = [
   {
     Header: "NAME",
     accessor: "name",
   },
   {
-    Header: "PROGRESS",
-    accessor: "progress",
+    Header: "TYPE OF CLAIM",
+    accessor: "typeofclaim",
   },
   {
-    Header: "QUANTITY",
-    accessor: "quantity",
-  },
-  {
-    Header: "DATE",
-    accessor: "date",
-  },
-];
-export const columnsDataComplex = [
-  {
-    Header: "NAME",
-    accessor: "name",
+    Header: "FILE",
+    accessor: "file",
   },
   {
     Header: "STATUS",
     accessor: "status",
-  },
-  {
-    Header: "DATE",
-    accessor: "date",
-  },
-  {
-    Header: "PROGRESS",
-    accessor: "progress",
   },
 ];
