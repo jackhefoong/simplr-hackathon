@@ -50,20 +50,19 @@ export default function DevelopmentTable(props) {
   const user = JSON.parse(window.localStorage.getItem('user'));
   const isAdmin = user.isAdmin;
   return (
-    <Box>
-      {/* Application Form TODO */}
-      <Box>
-        <FormControl>
-          <Input />
-        </FormControl>
-      </Box>
+    <Box mt={"3%"}>
 
       <Card direction="column" w="100%" px="0px" overflowX={{sm: 'scroll', lg: 'hidden'}}>
         <Flex px="25px" justify="space-between" mb="20px" align="center">
-          <Text color={textColor} fontSize="22px" fontWeight="700" lineHeight="100%">
-            Leave Applications
-          </Text>
-          {/* <Menu /> */}
+          {isAdmin === 'True' ? (
+            <Text color={textColor} fontSize="22px" fontWeight="700" lineHeight="100%">
+              Leave Applications
+            </Text>
+          ) : (
+            <Text color={textColor} fontSize="22px" fontWeight="700" lineHeight="100%">
+              My Past Applications
+            </Text>
+          )}
         </Flex>
         <Table {...getTableProps()} variant="simple" color="gray.500" mb="24px">
           <Thead>

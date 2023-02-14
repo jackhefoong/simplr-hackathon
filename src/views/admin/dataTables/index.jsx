@@ -3,6 +3,7 @@ import DevelopmentTable from 'views/admin/dataTables/components/DevelopmentTable
 import LeaveForm from 'views/admin/dataTables/components/LeaveForm';
 import {columnsDataDevelopment} from 'views/admin/dataTables/variables/columnsData';
 import tableDataDevelopment from 'views/admin/dataTables/variables/tableDataDevelopment.json';
+import userData from 'views/admin/dataTables/variables/userData.json';
 import React from 'react';
 
 export default function Settings() {
@@ -19,8 +20,8 @@ export default function Settings() {
     } else {
       return (
         <Box>
-          {/* <DevelopmentTable columnsData={columnsDataDevelopment} tableData={tableDataDevelopment} /> */}
           <LeaveForm />
+          <DevelopmentTable columnsData={columnsDataDevelopment} tableData={userData} />
         </Box>
       );
     }

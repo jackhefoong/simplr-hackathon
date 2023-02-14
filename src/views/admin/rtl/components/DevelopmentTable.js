@@ -62,146 +62,156 @@ export default function DevelopmentTable(props) {
   const user = JSON.parse(window.localStorage.getItem('user'));
   const isAdmin = user.isAdmin;
   return (
-    <Card direction="column" w="100%" px="0px" overflowX={{sm: 'scroll', lg: 'hidden'}}>
-      <Flex px="25px" justify="space-between" mb="20px" align="center">
-        <Text color={textColor} fontSize="22px" fontWeight="700" lineHeight="100%">
-          Employee Benefits
-        </Text>
-        <Menu />
-      </Flex>
+    <Box mt={'3%'}>
+      <Card direction="column" w="100%" px="0px" overflowX={{sm: 'scroll', lg: 'hidden'}}>
+        <Flex px="25px" justify="space-between" mb="20px" align="center">
+        {isAdmin === 'True' ? (
+            <Text color={textColor} fontSize="22px" fontWeight="700" lineHeight="100%">
+              Employee Benefits
+            </Text>
+          ) : (
+            <Text color={textColor} fontSize="22px" fontWeight="700" lineHeight="100%">
+              My Past Claims
+            </Text>
+          )}
+          <Menu />
+        </Flex>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Claim Application</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Image
-              src="https://s2.studylib.net/store/data/013790713_1-1272db9c818ae7f8235af6262dde8287.png"
-              alt="Form"
-            />
-          </ModalBody>
-          {isAdmin === 'True' ? (
-            <ModalFooter>
-              <Button colorScheme="red" mr={3} onClick={onClose}>
-                Deny
-              </Button>
-              <Button colorScheme="green" onClick={onClose}>
-                Approve
-              </Button>
-            </ModalFooter>
-          ) : <ModalFooter />}
-        </ModalContent>
-      </Modal>
+        <Modal isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>Claim Application</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <Image
+                src="https://s2.studylib.net/store/data/013790713_1-1272db9c818ae7f8235af6262dde8287.png"
+                alt="Form"
+              />
+            </ModalBody>
+            {isAdmin === 'True' ? (
+              <ModalFooter>
+                <Button colorScheme="red" mr={3} onClick={onClose}>
+                  Deny
+                </Button>
+                <Button colorScheme="green" onClick={onClose}>
+                  Approve
+                </Button>
+              </ModalFooter>
+            ) : (
+              <ModalFooter />
+            )}
+          </ModalContent>
+        </Modal>
 
-      <Table {...getTableProps()} variant="simple" color="gray.500" mb="24px">
-        <Thead>
-          {headerGroups.map((headerGroup, index) => (
-            <Tr {...headerGroup.getHeaderGroupProps()} key={index}>
-              {headerGroup.headers.map((column, index) => (
-                <Th
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
-                  pe="10px"
-                  key={index}
-                  borderColor={borderColor}
-                >
-                  <Flex justify="space-between" align="center" fontSize={{sm: '10px', lg: '12px'}} color="gray.400">
-                    {column.render('Header')}
-                  </Flex>
-                </Th>
-              ))}
-            </Tr>
-          ))}
-        </Thead>
-        <Tbody {...getTableBodyProps()}>
-          {page.map((row, index) => {
-            prepareRow(row);
-            return (
-              <Tr {...row.getRowProps()} key={index}>
-                {row.cells.map((cell, index) => {
-                  let data = '';
-                  if (cell.column.Header === 'NAME') {
-                    data = (
-                      <Text color={textColor} fontSize="sm" fontWeight="700">
-                        {cell.value}
-                      </Text>
-                    );
-                  } else if (cell.column.Header === 'TYPE OF CLAIM') {
-                    data = (
-                      <Text color={textColor} fontSize="sm" fontWeight="700">
-                        {cell.value}
-                      </Text>
-                    );
-                  } else if (cell.column.Header === 'FILE') {
-                    data = (
-                      // <Accordion allowMultiple>
-                      //   <AccordionItem>
-                      //     <AccordionButton>
-                      <Button color={textColor} fontSize="sm" fontWeight="700" bgColor={'lightgrey'} onClick={onOpen}>
-                        {cell.value}
-                      </Button>
-                      //       <AccordionPanel>
-                      //         {' '}
-                      //         <Image
-                      //           src="https://s2.studylib.net/store/data/013790713_1-1272db9c818ae7f8235af6262dde8287.png"
-                      //           alt="Form"
-                      //           boxSize={'md'}
-                      //         />
-                      //       </AccordionPanel>
-                      //     </AccordionButton>
-                      //   </AccordionItem>
-                      // </Accordion>
-                    );
-                  } else if (cell.column.Header === 'STATUS') {
-                    data = (
-                      <Flex align="center">
-                        <Icon
-                          w="24px"
-                          h="24px"
-                          me="5px"
-                          color={
-                            cell.value === 'Approved'
-                              ? 'green.500'
-                              : cell.value === 'Denied'
-                              ? 'red.500'
-                              : cell.value === 'Pending'
-                              ? 'yellow.500'
-                              : null
-                          }
-                          as={
-                            cell.value === 'Approved'
-                              ? MdCheckCircle
-                              : cell.value === 'Denied'
-                              ? MdCancel
-                              : cell.value === 'Pending'
-                              ? MdWarning
-                              : null
-                          }
-                        />
+        <Table {...getTableProps()} variant="simple" color="gray.500" mb="24px">
+          <Thead>
+            {headerGroups.map((headerGroup, index) => (
+              <Tr {...headerGroup.getHeaderGroupProps()} key={index}>
+                {headerGroup.headers.map((column, index) => (
+                  <Th
+                    {...column.getHeaderProps(column.getSortByToggleProps())}
+                    pe="10px"
+                    key={index}
+                    borderColor={borderColor}
+                  >
+                    <Flex justify="space-between" align="center" fontSize={{sm: '10px', lg: '12px'}} color="gray.400">
+                      {column.render('Header')}
+                    </Flex>
+                  </Th>
+                ))}
+              </Tr>
+            ))}
+          </Thead>
+          <Tbody {...getTableBodyProps()}>
+            {page.map((row, index) => {
+              prepareRow(row);
+              return (
+                <Tr {...row.getRowProps()} key={index}>
+                  {row.cells.map((cell, index) => {
+                    let data = '';
+                    if (cell.column.Header === 'NAME') {
+                      data = (
                         <Text color={textColor} fontSize="sm" fontWeight="700">
                           {cell.value}
                         </Text>
-                      </Flex>
-                    );
-                  }
+                      );
+                    } else if (cell.column.Header === 'TYPE OF CLAIM') {
+                      data = (
+                        <Text color={textColor} fontSize="sm" fontWeight="700">
+                          {cell.value}
+                        </Text>
+                      );
+                    } else if (cell.column.Header === 'FILE') {
+                      data = (
+                        // <Accordion allowMultiple>
+                        //   <AccordionItem>
+                        //     <AccordionButton>
+                        <Button color={textColor} fontSize="sm" fontWeight="700" bgColor={'lightgrey'} onClick={onOpen}>
+                          {cell.value}
+                        </Button>
+                        //       <AccordionPanel>
+                        //         {' '}
+                        //         <Image
+                        //           src="https://s2.studylib.net/store/data/013790713_1-1272db9c818ae7f8235af6262dde8287.png"
+                        //           alt="Form"
+                        //           boxSize={'md'}
+                        //         />
+                        //       </AccordionPanel>
+                        //     </AccordionButton>
+                        //   </AccordionItem>
+                        // </Accordion>
+                      );
+                    } else if (cell.column.Header === 'STATUS') {
+                      data = (
+                        <Flex align="center">
+                          <Icon
+                            w="24px"
+                            h="24px"
+                            me="5px"
+                            color={
+                              cell.value === 'Approved'
+                                ? 'green.500'
+                                : cell.value === 'Denied'
+                                ? 'red.500'
+                                : cell.value === 'Pending'
+                                ? 'yellow.500'
+                                : null
+                            }
+                            as={
+                              cell.value === 'Approved'
+                                ? MdCheckCircle
+                                : cell.value === 'Denied'
+                                ? MdCancel
+                                : cell.value === 'Pending'
+                                ? MdWarning
+                                : null
+                            }
+                          />
+                          <Text color={textColor} fontSize="sm" fontWeight="700">
+                            {cell.value}
+                          </Text>
+                        </Flex>
+                      );
+                    }
 
-                  return (
-                    <Td
-                      {...cell.getCellProps()}
-                      key={index}
-                      fontSize={{sm: '14px'}}
-                      minW={{sm: '150px', md: '200px', lg: 'auto'}}
-                      borderColor="transparent"
-                    >
-                      {data}
-                    </Td>
-                  );
-                })}
-              </Tr>
-            );
-          })}
-        </Tbody>
-      </Table>
-    </Card>
+                    return (
+                      <Td
+                        {...cell.getCellProps()}
+                        key={index}
+                        fontSize={{sm: '14px'}}
+                        minW={{sm: '150px', md: '200px', lg: 'auto'}}
+                        borderColor="transparent"
+                      >
+                        {data}
+                      </Td>
+                    );
+                  })}
+                </Tr>
+              );
+            })}
+          </Tbody>
+        </Table>
+      </Card>
+    </Box>
   );
 }

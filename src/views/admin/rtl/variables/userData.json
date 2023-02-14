@@ -1,0 +1,21 @@
+[
+    {
+      "name": "Tareef",
+      "typeofclaim": "Medical Claim",
+      "file": "1 Attachment",
+      "status": "Approved"
+    },
+    {
+      "name": "Tareef",
+      "typeofclaim": "Dental Claim",
+      "file": "1 Attachment",
+      "status": "Approved"
+    },
+    {
+      "name": "Tareef",
+      "typeofclaim": "Medical Claim",
+      "file": "1 Attachment",
+      "status": "Denied"
+    }
+  ]
+  

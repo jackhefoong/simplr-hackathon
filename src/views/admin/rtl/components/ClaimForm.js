@@ -4,7 +4,7 @@ import Card from 'components/card/Card';
 
 export default function ClaimForm() {
   return (
-    <Flex justifyContent="center" mt="15%">
+    <Flex justifyContent="center" mt="5%">
       <Card direction="column" w="70%" padding="20px">
         <Heading>Claim Application Form</Heading>
         <Center padding="20px">

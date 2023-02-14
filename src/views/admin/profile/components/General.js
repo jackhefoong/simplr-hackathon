@@ -46,8 +46,8 @@ export default function GeneralInformation(props) {
         />
         <Information
           boxShadow={cardShadow}
-          title='Work History'
-          value='Google, Meta, Forward School'
+          title='Executive Level'
+          value='2'
         />
         <Information
           boxShadow={cardShadow}

@@ -169,7 +169,8 @@ export default function UserReports() {
               </ModalContent>
             </Modal>
           </>
-          <Box>
+
+          <Box mt={'3%'}>
             <SimpleGrid columns={2} gap="20px" mb="20px">
               <TotalSpent />
               <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
@@ -180,14 +181,9 @@ export default function UserReports() {
       );
     } else {
       return (
-        <Box>
-            <Banner
-              banner={banner}
-              avatar={avatar}
-              name="Tareef"
-              job="Software Engineer"
-            />
-            <General minH="365px" pe="20px" />
+        <Box mt={'3%'}>
+          <Banner banner={banner} avatar={avatar} name="Tareef" job="Software Engineer" />
+          <General minH="365px" pe="20px" />
         </Box>
       );
     }

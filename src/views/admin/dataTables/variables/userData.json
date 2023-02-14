@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Tareef",
+    "typeofleave": "Annual Leave",
+    "duration": "13 Jan 2023 - 5 Dec 2025  ",
+    "status": "Pending"
+  },
+  {
+    "name": "Tareef",
+    "typeofleave": "Sick Leave",
+    "duration": "21 Feb 2023",
+    "status": "Approved"
+  },
+  {
+    "name": "Tareef",
+    "typeofleave": "Personal Leave",
+    "duration": "13 Mar 2023",
+    "status": "Denied"
+  }
+]
